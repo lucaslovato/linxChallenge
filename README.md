@@ -1,2 +1,2 @@
-# linxChallenge
+# Linx - Challenge
 FullStack challenge

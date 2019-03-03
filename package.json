@@ -1,11 +1,11 @@
 {
-  "name": "backendchallenge",
+  "name": "linxchallenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node ./lib/server.ts",
+    "dev": "ts-node ./server/server.ts",
     "start": "nodemon ./dist/server.js",
     "prod": "npm run build && npm run start"
   },
@@ -14,6 +14,7 @@
   "dependencies": {
     "@types/express": "^4.16.1",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
     "typescript": "^3.2.4"
