@@ -1,16 +1,15 @@
 /* CHAMANDO A FUNÇÃO DE CALLBACK DO SERVIDOR E PREPARANDO O AMBIENTE*/
-function X({ data }){
-  const { recommendation, reference, widget } = data;
+function X({data}) {
+  const {recommendation, reference, widget} = data;
   divCreator(reference.item, 'first', 'fisrt', 'first-container', false);
   recommendation.forEach(element => {
-    console.log(element)
     divCreator(element, 'mySlide', 'mySlide', 'slideshow-container', true);
   });
   this.initLis();
 }
 
 /* BLOCO QUE CRIA AS DIVS*/
-function divCreator(element, classId ,className, containerName, secondContainer){
+function divCreator(element, classId, className, containerName, secondContainer) {
 
   let firstDiv = document.createElement('div');
   firstDiv.id = classId;
@@ -19,13 +18,15 @@ function divCreator(element, classId ,className, containerName, secondContainer)
   let imgLink = document.createElement('a');
   imgLink.appendChild(image);
 
-  if(secondContainer){
+  if (secondContainer) {
     let myLi = document.createElement('li');
     myLi.className = 'myLi';
     document.getElementsByTagName('ul')[0].appendChild(myLi);
     myLi.appendChild(firstDiv);
   }
-  else {document.getElementsByClassName(containerName)[0].appendChild(firstDiv);}
+  else {
+    document.getElementsByClassName(containerName)[0].appendChild(firstDiv);
+  }
 
   firstDiv.appendChild(imgLink);
 
@@ -48,7 +49,7 @@ function divCreator(element, classId ,className, containerName, secondContainer)
   let innerDiv2 = document.createElement('div');
   innerDiv2.className = 'block-3';
 
-  if(element.oldPrice){
+  if (element.oldPrice) {
     let innerDiv3 = document.createElement('div');
     innerDiv3.className = 'block-4';
     innerDiv2.appendChild(innerDiv3);
@@ -70,14 +71,15 @@ function divCreator(element, classId ,className, containerName, secondContainer)
  * Iniciando os li`s para que aparecam os 3 primeiros produtos recomendados
  * na tela e dando o hide nos outros
  */
-function initLis(){
+function initLis() {
   let all_li = [...document.querySelectorAll(".myLi")];
-  for(let i = 0; i < all_li.length ; i++){
-    if(i < 3) all_li[i].className = "myLi";
+  for (let i = 0; i < all_li.length; i++) {
+    if (i < 3) all_li[i].className = "myLi";
     else all_li[i].className = "myLi myLi--hide";
   }
   return console.log("iniciado com sucesso", all_li);
 }
+
 /**
  * chamada do botao prev que faz o shift das imagens para a esquerda
  */
@@ -86,7 +88,7 @@ function shiftLeft() {
   const tmpNode = myLis[0];
   myLis[0].className = "myLi move-out-from-left";
   setTimeout(function () {
-    if(myLis.length > 3){
+    if (myLis.length > 3) {
       tmpNode.classList.add("myLi--hide");
       myLis[3].className = "myLi move-to-position3-from-left";
     }
@@ -98,13 +100,14 @@ function shiftLeft() {
 
   }, 200)
 }
+
 /**
  * chamada do botao next que faz o shift das imagens para a direita
  */
 function shiftRight() {
   const myLis = document.querySelectorAll(".myLi"); //pega todas as <li>
   myLis[2].className = "myLi move-out-from-right";
-  setTimeout(function() {
+  setTimeout(function () {
     const noOfCards = myLis.length;
     if (noOfCards > 2) {
       myLis[2].className = "myLi myLi--hide";

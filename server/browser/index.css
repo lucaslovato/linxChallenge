@@ -20,16 +20,19 @@
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
+
 .product, .similar-products {
     color: black;
     font-weight: bold;
     font-size: 18px;
     margin: auto;
 }
-.product{
+
+.product {
     position: relative;
     left: 10px;
 }
+
 .similar-products {
     position: absolute;
     left: 300px;
@@ -40,6 +43,7 @@
     left: 1070px;
     border-radius: 3px 0 0 3px;
 }
+
 /*altura dos botoes*/
 .prev, .next {
     position: absolute;
@@ -58,10 +62,12 @@
     border: 2px solid lightblue;
     border-radius: 25px;
 }
+
 /* div dos produtos*/
 .slideshow-container {
     display: flex;
 }
+
 /* UL CONTAINER*/
 .card__container {
     display: flex;
@@ -69,12 +75,14 @@
     justify-content: center;
     height: 25rem;
 }
-.first-container, .myLi{
+
+.first-container, .myLi {
     width: 250px;
     box-shadow: 0px 0px 2rem 0px #888888;
     background-color: white;
     position: relative;
 }
+
 .first-container {
     height: 290px;
     left: 10px;
@@ -82,24 +90,29 @@
     top: 65px;
 
 }
-.first-container:hover{
+
+.first-container:hover {
     border: 5px solid lightblue;
 }
+
 .first-container img {
     position: absolute;
     left: 50px;
     top: 0px;
     cursor: pointer;
 }
-.first-container .block-2{
+
+.first-container .block-2 {
     position: absolute;
     top: 150px;
     padding: 0 5px 5px 5px;
     font-size: 12px;
 }
-.first-container .block-3{
+
+.first-container .block-3 {
     font-size: 15px;
 }
+
 .myLi {
     height: 300px;
     display: flex;
@@ -108,13 +121,16 @@
     position: relative;
     left: 0px;
 }
-.myLi, .first-container{
+
+.myLi, .first-container {
     border: 1px solid lightblue;
     border-radius: 3px;
 }
-.myLi:hover{
+
+.myLi:hover {
     border: 5px solid lightblue;
 }
+
 /*tratamento da imagem */
 .mySlide img {
     position: absolute;
@@ -122,20 +138,24 @@
     top: 0px;
     cursor: pointer;
 }
+
 /*tratamento da descricao do produto*/
-.block-3, .block-4, .block-5{
+.block-3, .block-4, .block-5 {
     position: relative;
     left: 0px;
     font-size: 15px;
 }
-.block-2{
+
+.block-2 {
     position: absolute;
     font-size: 12px;
     left: 10px;
 }
-.block-4{
+
+.block-4 {
     color: black;
 }
+
 /*tratamento das li's filhas diminuindo-as para dar foco na primeira
 .myLi:nth-child(2){
   transform: scale(0.85);
@@ -195,12 +215,13 @@
         transform: translateX(0%);
     }
 }
+
 @keyframes moveToP3Left {
     from {
         transform: translateX(20%);
     }
     to {
-        transform:  translateX(0);
+        transform: translateX(0);
     }
 }
 
@@ -209,7 +230,7 @@
         transform: translateX(100%);
     }
     to {
-        transform:translateX(0);
+        transform: translateX(0);
     }
 }
 
@@ -218,13 +239,13 @@
         transform: translateX(100%);
     }
     to {
-        transform:  translateX(0);
+        transform: translateX(0);
     }
 }
 
 @keyframes moveToP1Right {
     from {
-        transform:  translateX(-15%);
+        transform: translateX(-15%);
     }
     to {
         transform: translateX(0);
@@ -233,7 +254,7 @@
 
 @keyframes moveToP2Right {
     from {
-        transform:  translateX(-100%);
+        transform: translateX(-100%);
     }
     to {
         transform: translateX(0);
@@ -242,7 +263,7 @@
 
 @keyframes moveToP3Right {
     from {
-        transform:  translateX(-100%);
+        transform: translateX(-100%);
     }
     to {
         transform: translateX(0);
