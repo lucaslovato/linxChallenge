@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-
+<div class="visit-bar">
+    <span class="product">Você visitou: </span>
+    <span class="similar-products"> e também pode se interessar por: </span>
+</div>
+<div class="flex-container">
+    <div class="first-container"> </div>
+    <div class="prev-button"><a class="prev" onclick="shiftLeft()">&#10094;</a></div>
+    <div class="slideshow-container">
+        <ul class="card__container">
+        </ul>
+        <div class="next-button"><a class="next" onclick="shiftRight()">&#10095;</a></div>
+    </div>
+</div>
 </body>
 </html>
+<script src="index.js"></script>
+<script src="http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X">
+</script>

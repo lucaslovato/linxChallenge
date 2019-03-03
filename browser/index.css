@@ -1,0 +1,259 @@
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #0b3cff;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 1s ease;
+}
+
+.visit-bar {
+    background: lightblue;
+    width: 1113px;
+    height: 30px;
+    position: relative;
+    top: 25px;
+    left: 0px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.product, .similar-products {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin: auto;
+}
+.product{
+    position: relative;
+    left: 10px;
+}
+.similar-products {
+    position: absolute;
+    left: 300px;
+}
+
+/* posicionando o botao de next */
+.next {
+    left: 1070px;
+    border-radius: 3px 0 0 3px;
+}
+/*altura dos botoes*/
+.prev, .next {
+    position: absolute;
+    top: 230px;
+}
+
+/*hover dos botoes */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.flex-container {
+    display: flex;
+    width: 1110px;
+    height: 380px;
+    border: 2px solid lightblue;
+    border-radius: 25px;
+}
+/* div dos produtos*/
+.slideshow-container {
+    display: flex;
+}
+/* UL CONTAINER*/
+.card__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+}
+.first-container, .myLi{
+    width: 250px;
+    box-shadow: 0px 0px 2rem 0px #888888;
+    background-color: white;
+    position: relative;
+}
+.first-container {
+    height: 290px;
+    left: 10px;
+    padding: 5px;
+    top: 65px;
+
+}
+.first-container:hover{
+    border: 5px solid lightblue;
+}
+.first-container img {
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    cursor: pointer;
+}
+.first-container .block-2{
+    position: absolute;
+    top: 150px;
+    padding: 0 5px 5px 5px;
+    font-size: 12px;
+}
+.first-container .block-3{
+    font-size: 15px;
+}
+.myLi {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0px;
+}
+.myLi, .first-container{
+    border: 1px solid lightblue;
+    border-radius: 3px;
+}
+.myLi:hover{
+    border: 5px solid lightblue;
+}
+/*tratamento da imagem */
+.mySlide img {
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    cursor: pointer;
+}
+/*tratamento da descricao do produto*/
+.block-3, .block-4, .block-5{
+    position: relative;
+    left: 0px;
+    font-size: 15px;
+}
+.block-2{
+    position: absolute;
+    font-size: 12px;
+    left: 10px;
+}
+.block-4{
+    color: black;
+}
+/*tratamento das li's filhas diminuindo-as para dar foco na primeira
+.myLi:nth-child(2){
+  transform: scale(0.85);
+}
+.myLi:nth-child(3){
+  transform: scale(0.85);
+}
+*/
+
+/*visibilidade dos li's que nao estao aparecendo*/
+.myLi--hide {
+    display: none;
+}
+
+/* modificacoes na classe para animacao*/
+.move-out-from-left {
+    animation: moveOutLeft 0.3s ease-in-out;
+}
+
+.move-out-from-right {
+    animation: moveOutRight 0.3s ease-in-out;
+}
+
+.move-to-position3-from-left {
+    animation: moveToP3Left 0.3s ease-in-out;
+}
+
+.move-to-position2-from-left {
+    animation: moveToP2Left 0.3s ease-in-out;
+}
+
+.move-to-position1-from-left {
+    animation: moveToP1Left 0.3s ease-in-out;
+}
+
+.move-to-position3-from-right {
+    animation: moveToP3Right 0.3s ease-in-out;
+}
+
+.move-to-position2-from-right {
+    animation: moveToP2Right 0.3s ease-in-out;
+}
+
+.move-to-position1-from-right {
+    animation: moveToP1Right 0.3s ease-in-out;
+}
+
+/* animacao*/
+@keyframes moveOutLeft {
+    0% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveOutRight {
+    0% {
+        transform: translateX(0%);
+    }
+}
+@keyframes moveToP3Left {
+    from {
+        transform: translateX(20%);
+    }
+    to {
+        transform:  translateX(0);
+    }
+}
+
+@keyframes moveToP2Left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform:translateX(0);
+    }
+}
+
+@keyframes moveToP1Left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform:  translateX(0);
+    }
+}
+
+@keyframes moveToP1Right {
+    from {
+        transform:  translateX(-15%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveToP2Right {
+    from {
+        transform:  translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveToP3Right {
+    from {
+        transform:  translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.block-3, .block-5 {
+    color: red;
+}
